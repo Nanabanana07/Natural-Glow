@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Natural Glow</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+  <header class="navbar">
+  <div class="container">
+    <div class="logo" tabindex="0">Natural Glow</div>
+    <nav>
+      <ul class="menu" role="menubar">
+        <li><a href="base.html" role="menuitem" tabindex="0">Inicio</a></li>
+        <li><a href="recomendaciones.html" role="menuitem" tabindex="0">Recomendaciones</a></li>
+        <li><a href="rutina.html" role="menuitem" tabindex="0">Rutinas</a></li>
+        <li><a href="sobre.html" role="menuitem" tabindex="0">Sobre Nosotras</a></li>
+        <li><a href="contacto.html" role="menuitem" tabindex="0">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>"Tu piel es arte, trátala como tal"</h1>
+      <div class="slogan-logo">
+        <p class="slogan">Aquí comienza tu nueva costumbre, del cuidado de tu piel.</p>
+      </div>
+      <a href="Login.html" class="btn btn-primary">Descubre más</a>
+    </div>
+     <div class="hero-image">
+      <img src="C:\Users\ariva\Desktop\Sublime Text\Imagenes/Piel.jpg" alt="Cuidado de la piel" />
+    </div>
+  </div>
+</section>
+
+<section class="destacados container">
+  <h2>Tipos de piel</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="C:\Users\ariva\Desktop\Sublime Text\Imagenes/Piel seca.jpg" alt="Piel Seca" />
+      <h3>Piel Seca</h3>
+      <p>La piel seca se siente tirante y áspera. Requiere hidratación intensa y productos ricos en lípidos.</p>
+      <a href="rutina.html" class="btn btn-secondary">Ver más</a>
+    </article>
+
+    <article class="card">
+      <img src="C:\Users\ariva\Desktop\Sublime Text\Imagenes/Piel grasa2.jpg" alt="Piel Grasa" />
+      <h3>Piel Grasa</h3>
+      <p>Produce exceso de sebo, poros dilatados y brillo constante. Se recomienda limpieza profunda y productos no comedogénicos.</p>
+      <a href="rutina2.html" class="btn btn-secondary">Ver más</a>
+    </article>
+
+    <article class="card">
+      <img src="C:\Users\ariva\Desktop\Sublime Text\Imagenes/Piel mixta2.jpg" alt="Piel Mixta" />
+      <h3>Piel Mixta</h3>
+      <p>Zona T grasa y mejillas secas. Requiere equilibrio con productos específicos para cada área.</p>
+      <a href="rutina3.html" class="btn btn-secondary">Ver más</a>
+    </article>
+  </div>
+</section>
+
+<section class="info-extra">
+  <div class="container text-center fade-in-up">
+    <h3>¿Quieres saber más?</h3>
+    <a href="recomendaciones.html" class="btn btn-primary">Presiona aquí</a>
+  </div>
+</section>
+<div class="container">
+<main>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f6f0;
+      color: #5a4631;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background-color: #cbb493;
+      color: #5a4631;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(90,70,40,0.3);
+    }
+    header .container, footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #7e5a3c;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #8c6f5c;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #5a4631;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #a57c55;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 3px #e7d9c1;
+    }
+    form {
+      background: #cbb493;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(142, 102, 68, 0.5);
+      color: #5a4631;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #8c6f5c;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+      min-height: 40px;
+      transition: box-shadow 0.3s ease;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(165, 124, 85, 0.5);
+    }
+    button {
+      background-color: #a57c55;
+      color: #f5f1eb;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(165, 124, 85, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    button:hover {
+      background-color: #8e6644;
+      box-shadow: 0 8px 18px rgba(142, 102, 68, 0.9);
+    }
+    footer p {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      color: #5a4631;
+    }
+    /* Responsivo */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+  </main>
+<footer>
+    <div class="container">
+      <p>&copy; 2025 SkinCarePro | Tu piel, tu mejor inversión</p>
+    </div>
+  </footer>
+</body>
+</html>

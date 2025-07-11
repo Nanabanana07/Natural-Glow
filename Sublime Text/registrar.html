@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Glow</title>
+<link rel="stylesheet" href="Estilo.css"/>
+<style>
+	body{
+  background-color: #cbb493; /* beige medio */
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  border-radius: 20px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(165, 124, 85, 0.3);
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  color: #5a4631; /* café oscuro */
+}
+</style>
+<div class="login-container">
+<h2>Iniciar Sesión</h2>
+<form action="contenido.html" method="get">
+	<label for="usuario">Usuario:</label><br>
+<input type="Text" id="usuario" name="usuario" required><br><br>
+
+<label for="clave">Contraseña:</label><br>
+<input type="password" id="contraseña" name="contraseña" required><br><br> 
+<a href="base.html">Entrar</a>
+</form>
+</div>
+</body>
+</html>

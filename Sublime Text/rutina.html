@@ -1,0 +1,193 @@
+  <title>Natural Glow</title>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<a href="base.html"></a>
+<body>
+  <header class="navbar">
+  <div class="container">
+    <div class="logo" tabindex="0">Natural Glow</div>
+    <nav>
+      <ul class="menu" role="menubar">
+        <li><a href="base.html" role="menuitem" tabindex="0">Inicio</a></li>
+        <li><a href="recomendaciones.html" role="menuitem" tabindex="0">Recomendaciones</a></li>
+        <li><a href="rutina.html" role="menuitem" tabindex="0">Rutinas</a></li>
+        <li><a href="sobre.html" role="menuitem" tabindex="0">Sobre Nosotras</a></li>
+        <li><a href="contacto.html" role="menuitem" tabindex="0">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+ 
+<section class="rutinas container">
+  <h1>Rutinas de Cuidado Facial</h1>
+  <p>Descubre la rutina ideal para tu tipo de piel y aprende a cuidarla de manera efectiva.</p>
+
+  <div class="tipos-piel">
+    <div class="tipo-piel" id="piel-seca">
+      <h2>Piel Seca</h2>
+      <p>La piel seca tiende a sentirse tirante y puede presentar descamación. Es esencial mantenerla hidratada y nutrida.</p>
+      <button class="btn btn-primary" onclick="mostrarRutina('seca')">Ver Rutina</button>
+    </div>
+    <div class="tipo-piel" id="piel-grasa">
+      <h2>Piel Grasa</h2>
+      <p>La piel grasa produce exceso de sebo, lo que puede causar brillo y poros dilatados. Requiere una limpieza adecuada y control de la grasa.</p>
+      <button class="btn btn-primary" onclick="mostrarRutina('grasa')">Ver Rutina</button>
+    </div>
+    <div class="tipo-piel" id="piel-mixta">
+      <h2>Piel Mixta</h2>
+      <p>La piel mixta combina zonas secas y grasas. Necesita una rutina equilibrada que atienda ambas necesidades.</p>
+      <button class="btn btn-primary" onclick="mostrarRutina('mixta')">Ver Rutina</button>
+    </div>
+  </div>
+
+  <div id="rutina-detalle" class="rutina-detalle">
+    <h3>Rutina para Piel Seca</h3>
+    <ul>
+      <li><strong>1. Limpieza:</strong> Utiliza un limpiador suave sin sulfatos para evitar la deshidratación.</li>
+      <li><strong>2. Hidratación:</strong> Aplica un tónico hidratante seguido de un sérum con ácido hialurónico.</li>
+      <li><strong>3. Crema Hidratante:</strong> Usa una crema rica en ceramidas y aceites naturales.</li>
+      <li><strong>4. Protección Solar:</strong> No olvides aplicar protector solar de amplio espectro cada mañana.</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  function mostrarRutina(tipo) {
+    const rutinaDetalle = document.getElementById('rutina-detalle');
+    if (tipo === 'seca') {
+      rutinaDetalle.innerHTML = `
+        <h3>Rutina para Piel Seca</h3>
+        <ul>
+          <li><strong>1. Limpieza:</strong> Utiliza un limpiador suave sin sulfatos para evitar la deshidratación.</li>
+          <li><strong>2. Hidratación:</strong> Aplica un tónico hidratante seguido de un sérum con ácido hialurónico.</li>
+          <li><strong>3. Crema Hidratante:</strong> Usa una crema rica en ceramidas y aceites naturales.</li>
+          <li><strong>4. Protección Solar:</strong> No olvides aplicar protector solar de amplio espectro cada mañana.</li>
+        </ul>
+      `;
+    } else if (tipo === 'grasa') {
+      rutinaDetalle.innerHTML = `
+        <h3>Rutina para Piel Grasa</h3>
+        <ul>
+          <li><strong>1. Limpieza:</strong> Usa un gel limpiador con ácido salicílico para controlar el exceso de sebo.</li>
+          <li><strong>2. Exfoliación:</strong> Exfolia una vez por semana para eliminar células muertas y prevenir brotes.</li>
+          <li><strong>3. Hidratación:</strong> Aplica una crema ligera no comedogénica.</li>
+          <li><strong>4. Protección Solar:</strong> Elige un protector solar libre de aceites.</li>
+        </ul>
+      `;
+    } else if (tipo === 'mixta') {
+      rutinaDetalle.innerHTML = `
+        <h3>Rutina para Piel Mixta</h3>
+        <ul>
+          <li><strong>1. Limpieza:</strong> Utiliza un limpiador equilibrante que no reseque ni aporte grasa.</li>
+          <li><strong>2. Hidratación:</strong> Aplica un tónico hidratante en todo el rostro.</li>
+          <li><strong>3. Crema Hidratante:</strong> Usa una crema ligera en la zona T y más rica en las mejillas.</li>
+          <li><strong>4. Protección Solar:</strong> Aplica protector solar adecuado para piel mixta.</li>
+        </ul>
+      `;
+    }
+    rutinaDetalle.style.display = 'block';
+  }
+</script>
+<div class="container">
+
+  <main>
+     <style>
+       /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f6f0;
+      color: #5a4631;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background-color: #cbb493;
+      color: #5a4631;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(90,70,40,0.3);
+    }
+    header .container, footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #7e5a3c;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #8c6f5c;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #5a4631;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #a57c55;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 3px #e7d9c1;
+    }
+    main p {
+      font-size: 1.2rem;
+      color: #8c6f5c;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    footer p {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      color: #5a4631;
+    }
+* Responsivo */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main h1 {
+        font-size: 2.2rem;
+      }
+      main p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+<footer>
+    <div class="container">
+      <p>&copy; 2025 SkinCarePro | Tu piel, tu mejor inversión</p>
+    </div>
+  </footer>
+</body>
+</html>

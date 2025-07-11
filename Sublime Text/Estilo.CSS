@@ -1,0 +1,497 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f1eb; /* beige muy claro, neutro para fondo */
+  color: #5a4631; /* café oscuro suave para texto */
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animaciones para la entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #cbb493; /* beige medio */
+  box-shadow: 0 2px 10px rgba(90, 70, 40, 0.5); /* sombra café suave */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #7e5a3c; /* café oscuro */
+  cursor: pointer;
+  animation: fadeInScale 1.2s ease forwards;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #8c6f5c; /* beige oscuro */
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #5a4631; /* café oscuro */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #f1e4d3, #d6c3aa); /* tonos piel claros */
+  padding: 5rem 0 6rem;
+  color: #5a4631; /* café oscuro */
+  margin-bottom: 4rem;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 8px 20px rgba(150, 110, 50, 0.3); /* sombra suave piel */
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #a57c55; /* café claro */
+  text-shadow: 1px 1px 4px #e7d9c1;
+}
+
+.hero-text p.slogan {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #9e8c7a; /* beige medio */
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #a57c55; /* café claro */
+  color: #f5f1eb; /* blanco beige */
+  box-shadow: 0 6px 12px rgba(165, 124, 85, 0.7);
+}
+
+.btn-primary:hover {
+  background-color: #8e6644;
+  box-shadow: 0 8px 18px rgba(142, 102, 68, 0.9);
+}
+
+.btn-secondary {
+  background-color: #d6c3aa; /* beige medio */
+  color: #5a4631; /* café oscuro */
+  box-shadow: 0 6px 12px rgba(214, 195, 170, 0.7);
+}
+
+.btn-secondary:hover {
+  background-color: #bfa880;
+  box-shadow: 0 8px 18px rgba(191, 168, 128, 0.9);
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeInScale 1.8s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(165, 124, 85, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 18px 36px rgba(142, 102, 68, 0.8);
+}
+
+/* Destacados Section */
+.destacados {
+  margin-bottom: 4rem;
+}
+
+.destacados h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #a57c55; /* café claro */
+  text-align: center;
+  text-shadow: 0 1px 3px #e7d9c1;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInUp 2.3s ease forwards;
+  opacity: 0;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.card {
+  background: #cbb493; /* beige medio */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(165, 124, 85, 0.15);
+  max-width: 320px;
+  flex: 1 1 320px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #5a4631; /* café oscuro */
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 14px 38px rgba(142, 102, 68, 0.4);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 20px rgba(191, 168, 128, 0.3);
+}
+
+/* Footer */
+.footer {
+  background: #a57c55; /* café claro */
+  color: #5a4631; /* blanco beige */
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 -4px 12px rgba(142, 102, 68, 0.6);
+  animation: fadeInUp 2.5s ease forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+/* Sección Auth (Login & Registro) */
+.login-section, .register-section {
+  background-color: #cbb493; /* beige medio */
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  border-radius: 20px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(165, 124, 85, 0.3);
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  color: #5a4631; /* café oscuro */
+}
+
+.login-section h2,
+.register-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #a57c55; /* café claro */
+  text-shadow: 0 1px 3px #e7d9c1;
+}
+
+.form-auth label {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #8c6f5c; /* beige oscuro */
+}
+
+.form-auth input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f1eb; /* beige claro */
+  color: #5a4631; /* café oscuro */
+  transition: all 0.3s ease;
+}
+
+.form-auth input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(165, 124, 85, 0.5);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #5a4631; /* café oscuro */
+}
+
+.auth-link a {
+  color: #a57c55; /* café claro */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-link a:hover {
+  color: #8c6f5c; /* beige oscuro */
+}
+
+/* info adicional, recomendaciones, rutinas, tipos piel, rutina detalle */
+
+.info-adicional {
+  max-width: 600px;
+  margin: 6rem auto 5rem auto;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.info-adicional h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #a57c55; /* café claro */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.info-adicional .btn {
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+}
+
+.recomendaciones {
+  padding: 3rem 0;
+  color: #5a4631; /* café oscuro */
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.recomendaciones h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #a57c55; /* café claro */
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.recomendaciones p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #8c6f5c; /* beige oscuro */
+}
+
+.botones-recomendaciones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.botones-recomendaciones .btn {
+  min-width: 140px;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
+
+.info-piel {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  background: #cbb493; /* beige medio */
+  padding: 1.8rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(142, 102, 68, 0.5);
+  color: #5a4631; /* café oscuro */
+  line-height: 1.5;
+  min-height: 140px;
+  transition: all 0.3s ease;
+}
+
+.rutinas {
+  padding: 3rem 0;
+  color: #5a4631; /* café oscuro */
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.rutinas h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #a57c55; /* café claro */
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.rutinas p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #8c6f5c; /* beige oscuro */
+}
+
+.tipos-piel {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tipo-piel {
+  text-align: center;
+  max-width: 250px;
+}
+
+.tipo-piel h2 {
+  font-size: 1.5rem;
+  color: #a57c55; /* café claro */
+  margin-bottom: 1rem;
+}
+
+.tipo-piel p {
+  font-size: 1rem;
+  color: #8c6f5c; /* beige oscuro */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tipo-piel .btn {
+  background-color: #d6c3aa; /* beige medio */
+  color: #5a4631; /* café oscuro */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tipo-piel .btn:hover {
+  background-color: #bfa880; /* beige más oscuro */
+}
+
+.rutina-detalle {
+  display: none;
+  background-color: #cbb493; /* beige medio */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(142, 102, 68, 0.5);
+  color: #5a4631; /* café oscuro */
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rutina-detalle h3 {
+  font-size: 2rem;
+  color: #a57c55; /* café claro */
+  margin-bottom: 1rem;
+}
+
+.rutina-detalle ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rutina-detalle li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,129 @@
+<title>Natural Glow</title>
+<link rel="stylesheet" type="text/css" href="Estilo.css">
+<a href="base.html"></a>
+<body>
+  <header class="navbar">
+  <div class="container">
+    <div class="logo" tabindex="0">Natural Glow</div>
+    <nav>
+      <ul class="menu" role="menubar">
+        <li><a href="base.html" role="menuitem" tabindex="0">Inicio</a></li>
+        <li><a href="recomendaciones.html" role="menuitem" tabindex="0">Recomendaciones</a></li>
+        <li><a href="rutina.html" role="menuitem" tabindex="0">Rutinas</a></li>
+        <li><a href="sobre.html" role="menuitem" tabindex="0">Sobre Nosotras</a></li>
+        <li><a href="contacto.html" role="menuitem" tabindex="0">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+     <style>
+       /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f6f0;
+      color: #5a4631;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background-color: #cbb493;
+      color: #5a4631;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(90,70,40,0.3);
+    }
+    header .container, footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #7e5a3c;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #8c6f5c;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #5a4631;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #a57c55;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 3px #e7d9c1;
+    }
+    main p {
+      font-size: 1.2rem;
+      color: #8c6f5c;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    footer p {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      color: #5a4631;
+    }
+* Responsivo */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main h1 {
+        font-size: 2.2rem;
+      }
+      main p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+<section class="sobre nosotras container">
+    <h1>Sobre Nosotras</h1>
+    <p>
+      Somos un grupo de niñas apasionadas por el cuidado de la piel y la salud natural. 
+      Nuestro objetivo es crear un espacio digital donde todas puedan aprender, compartir y 
+      crecer en su rutina de cuidado facial y corporal. Creemos que una piel sana refleja 
+      confianza y bienestar, y aquí te ayudamos a conseguirlo con consejos, rutinas personalizadas y recomendaciones confiables.
+    </p>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SkinCarePro | Tu piel, tu mejor inversión</p>
+    </div>
+  </footer>
+</body>
+</html>
